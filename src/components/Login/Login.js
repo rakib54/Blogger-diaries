@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { auth } from './firebase.config';
 import { useHistory } from 'react-router-dom'
+import { UserContext } from '../../App';
 
 const Login = () => {
-
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [isSignUp, setIsSignup] = useState(false)
     const [passwordCorrect, setPasswordCorrect] = useState(true)
     const [user, setUser] = useState({
@@ -38,8 +39,9 @@ const Login = () => {
                 .then((result) => {
                     result.user.updateProfile({
                         displayName: user.fullName
-                        
+
                     })
+                    setLoggedInUser(result.user)
                     history.push('/')
                 })
                 .catch(err => console.log(err))
@@ -53,18 +55,18 @@ const Login = () => {
         auth.signInWithEmailAndPassword(user.email, user.password)
             .then((res) => {
                 const user = res.user
-                console.log(user);
+                setLoggedInUser(user)
                 setPasswordCorrect(true)
                 history.push('/')
-                
+
             })
-            
+
             .catch(err => {
                 setPasswordCorrect(false)
                 console.log(err);
             })
     }
-    
+
 
     const SwitchMode = () => {
         setIsSignup(toggle => !toggle)

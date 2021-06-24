@@ -72,3 +72,23 @@
   background-color: rgb(98, 29, 29);
   color: #fff;
 }
+
+/* Footer css */
+
+.social-media .icon{
+  height: 40px;
+  width: 40px;
+  color: white;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.footer-area{
+  background-color: rgb(5, 5, 5);
+  color: white;
+  margin-top: 80px;
+}
+
+.footer-area li{
+  padding-bottom: 10px;
+}
