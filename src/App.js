@@ -9,6 +9,8 @@ import Home from './components/Home/Home';
 import Login from "./components/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
 import PrivateRoute from "./components/Login/PrivateRoute";
+import Sidebar from "./components/Sidebar/Sidebar";
+import PostBlogs from "./components/PostBlogs/PostBlogs";
 
 export const UserContext = createContext()
 
@@ -26,6 +28,12 @@ function App() {
           </PrivateRoute>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/admin">
+            <Sidebar />
+          </Route>
+          <Route path="/postBlogs">
+            <PostBlogs />
           </Route>
           <Route path="/">
             <Home />

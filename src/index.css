@@ -92,3 +92,25 @@
 .footer-area li{
   padding-bottom: 10px;
 }
+
+/* sidebar css */
+
+.sidebar{
+  background-image: linear-gradient(180deg, #2f3338, rgb(17, 15, 15));
+  position: absolute;
+}
+.sidebar li{
+  margin-bottom: 2em;
+}
+.sidebar a{
+  text-decoration: none;
+  color: white;
+}
+.sidebar li:hover span{
+  display: inline-block;
+  transform:translate(2px)
+}
+.sidebar svg{
+  margin-right: 10px;
+}
+
