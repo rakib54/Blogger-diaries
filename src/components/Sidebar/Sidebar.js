@@ -8,6 +8,7 @@ const Sidebar = () => {
         <>
             <div className="container-fluid">
                 <div className="sidebar d-flex justify-content-between col-md-2 py-5 px-4" style={{ height: '100vh' }}>
+
                     <ul className="list-unstyled">
                         <li>
                             <Link to="/postBlogs">
@@ -20,6 +21,9 @@ const Sidebar = () => {
                             </Link>
                         </li>
                     </ul>
+                </div>
+                <div className="col-md-10 p-3">
+                    <h3 className="text-center">Welcome Admin</h3>
                 </div>
             </div>
         </>

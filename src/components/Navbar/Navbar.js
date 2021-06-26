@@ -36,9 +36,12 @@ const Navbar = () => {
                                         <li className="nav-item">
                                             <NavLink activeClassName="menu-active" to="/contact" className="nav-link">Contact</NavLink>
                                         </li>
-                                        <li className="nav-item">
-                                            <NavLink activeClassName="menu-active" to="/admin" className="nav-link">Admin</NavLink>
-                                        </li>
+                                        {
+                                            loggedInUser.email === 'test@test.com' &&
+                                            <li className="nav-item">
+                                                <NavLink activeClassName="menu-active" to="/admin" className="nav-link">Admin</NavLink>
+                                            </li>
+                                        }
                                         {
                                             loggedInUser.email ?
                                                 <li className="nav-item">

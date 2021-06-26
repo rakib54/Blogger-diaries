@@ -28,8 +28,6 @@ const PostBlogs = () => {
             .catch(err => console.log(err))
     };
 
-
-
     const handleImageChanged = (event) => {
         const imageData = new FormData()
         imageData.set('key', '0d490a6f5bc01d67efe384d3ef08195a')
@@ -64,7 +62,10 @@ const PostBlogs = () => {
                                 <input className="form-control" type="file" onChange={handleImageChanged} />
                             </div>
 
-                            <input className="btn btn-success" type="submit" />
+                            {
+                                imageUrl ? <input className="btn btn-success" type="submit" />:
+                                <button className="btn btn-danger">Fill all the data</button>
+                            }
                         </form>
                     </div>
                 </div>

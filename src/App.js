@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar/Navbar";
 import PrivateRoute from "./components/Login/PrivateRoute";
 import Sidebar from "./components/Sidebar/Sidebar";
 import PostBlogs from "./components/PostBlogs/PostBlogs";
+import BlogsData from "./components/BlogsData/BlogsData";
 
 export const UserContext = createContext()
 
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path="/postBlogs">
             <PostBlogs />
+          </Route>
+          <Route path="/allBlogs">
+            <BlogsData />
           </Route>
           <Route path="/">
             <Home />
