@@ -6,7 +6,7 @@ const BlogsData = () => {
     const [blogDelete, setBlogDelete] = useState(false)
 
     useEffect(() => {
-        fetch('http://localhost:4000/allBlog')
+        fetch('https://sheltered-journey-19349.herokuapp.com/allBlog')
             .then(res => res.json())
             .then(data => {
                 setBlogData(data)
@@ -15,7 +15,7 @@ const BlogsData = () => {
 
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:4000/deleteBlogs/${id}`, {
+        fetch(`https://sheltered-journey-19349.herokuapp.com/deleteBlogs/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

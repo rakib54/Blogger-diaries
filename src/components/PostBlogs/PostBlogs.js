@@ -15,7 +15,7 @@ const PostBlogs = () => {
         }
         console.log(BlogData);
 
-        fetch('http://localhost:4000/blogs', {
+        fetch('https://sheltered-journey-19349.herokuapp.com/blogs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
